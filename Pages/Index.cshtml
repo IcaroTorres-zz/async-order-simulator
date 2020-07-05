@@ -1,0 +1,49 @@
+﻿@page
+<style>
+  body {
+    font-size: 10px;
+  }
+
+  .rightside {
+    padding: 1em;
+  }
+
+  #send-order {
+    font-size: 1em;
+    padding: .75em;
+    -webkit-appearance: none;
+    background-color: #fee;
+    border: .1em solid #888;
+    margin-bottom: .5em;
+  }
+
+  .order-body {
+    margin-left: 2em;
+  }
+
+  hr {
+    margin: .5em 0 .5em;
+  }
+</style>
+<div class="row">
+  <div class="col-sm-8 col-md-6">
+    <label for="items-count">Items Count</label>
+    <input id="items-count" type="number" name="items-count" value="3" />
+
+    <label for="voucher">Voucher Code</label>
+    <input id="voucher" type="text" name="voucher" value="" />
+
+    <button id="send-order">Send Order</button>
+    <div id="sketchpad-app">
+      <div class="rightside">
+
+        <br />
+        <ul id="order-list"></ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/orders.js"></script>
